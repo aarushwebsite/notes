@@ -1,0 +1,213 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-weight: 400;
+    font-family: 'Lato' , sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,rgba(238, 15, 219, 0.397) ,rgba(255, 146, 246, 0.397));
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0 ,100% 0,100% 80% , 0 100%);
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.logo{
+    height: 55px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    backface-visibility: hidden;
+}
+
+.text-box{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+
+.heading-primary{
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    backface-visibility: hidden;
+    
+}
+
+
+.heading-primary-main{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 25px;
+    animation-name: moveInLeft;
+    animation-delay:0s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    transition: all 1s;
+    
+}
+
+.heading-primary-main:hover{
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .5);
+}
+
+.heading-primary-main:active{
+    box-shadow: -5px 15px 15px rgba(0, 0, 0, .6);
+} 
+
+.heading-primary-sub:hover{
+    box-shadow: 5px 15px 20px rgba(0, 0, 0, .4);
+    color: rgba(0, 0, 0);
+}
+
+.heading-primary-sub:active{
+    box-shadow: -5px 15px 15px rgba(0, 0, 0, .5);
+    color: royalblue;
+}
+
+.channel{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+   transition: 1s ease-out;
+}
+
+.channel:hover{
+    color:black;
+    font-size: 18px;
+    text-decoration: underline;
+    transition: 1s ease-out;
+}
+
+.channel:active{
+    color: royalblue;
+    font-size: 20px;
+    text-decoration: line-through;
+    transition: 1s ease-out;
+}
+
+.heading-primary-sub{
+    
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 6.4px;
+    animation-name: moveInRight;
+    animation-delay:0s ;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    transition: all 1.5s;
+}
+
+.btn:link , 
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:15px 40px ;  
+    display: inline-block ;
+    border-radius: 100px;
+    transition: all .5s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .4);
+}
+
+.btn-white{
+    background-color: white;
+    color:  #777;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.notes{
+    color: red;
+    padding: 30px;
+}
+
+/* animations */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-10px)
+    }
+
+    100%{
+        opacity: 1;
+        transform:translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform:  translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform:  translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
