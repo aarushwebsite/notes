@@ -159,10 +159,14 @@ body{
 }
 
 .notes{
-    color: red;
     padding: 30px;
 }
 
+input{
+    width: 25px;
+    height: 10px;
+}   
+    
 /* animations */
 
 @keyframes fadeIn {
